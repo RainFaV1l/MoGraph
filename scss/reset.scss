@@ -1,0 +1,111 @@
+// Обнуление стилей
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Убираем внутренние отступы и удаляем стандартную стилизацию
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+// Убираем внешние отступы
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// Выставляем основные настройки по-умолчанию для body
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 130%;
+}
+
+// Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class
+ul,
+ol {
+  list-style: none;
+}
+
+// Выставляем элемент a до дефолтных стилей
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Упрощаем работу с изображениями
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Указываем понятную периодичность в потоке данных у article
+article > * + * {
+  margin-top: 1em;
+}
+
+// Наследуем шрифты для инпутов и кнопок
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+// Привязка футера к низу страницы
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+// Обнуление input
+
+input,
+textarea,
+select {
+  outline: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
